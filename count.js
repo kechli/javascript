@@ -17,15 +17,15 @@ But bears it out even to the edge of doom.
 let uniques = new Map();
 // All words in the text
 let count = 0;
-let words = sonnet.match(/\w+'/w+/g);
+let words = sonnet.match(/\w+/g);
 
 // Iterate through `words` and build up an associative array of unique words.
 for (let i = 0; i < words.length; i++) {
   let word = words[i];
-  if uniques.has(word) {
+  if uniques.get("word") {
     uniques.set(word,count+=1)
   } else {
-    uniques.set(word,count==1)
+    uniques.set(word,1)
   }
 }
 
